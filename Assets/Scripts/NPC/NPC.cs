@@ -12,14 +12,14 @@ public class NPC : MonoBehaviour
     [SerializeField] private DialogueObject[] templates;
     [SerializeField] private NPC[] npcList;
     [SerializeField] private string[] areaList;
-    private bool hasQuest = false;
+    public bool hasQuest = false;
+    [SerializeField] private GameObject questIndicator;
     [SerializeField] private Item[] itemList;
     [SerializeField] private DialogueObject hello;
     void Start()
     {
-        // npcNames = Array.ConvertAll<NPC, string>(npcList, npc => npc.NPCName);
-        generateQuest();
         if (NPCName == "") NPCName = gameObject.name;
+        // generateQuest();
     }
 
     public void generateQuest()
@@ -143,5 +143,10 @@ public class NPC : MonoBehaviour
         if (area != null)
             format = format.Replace("${area}", "<color=red>" + area + "</color>");
         return format;
+    }
+
+    public void Update()
+    {
+        questIndicator.SetActive(hasQuest);
     }
 }
