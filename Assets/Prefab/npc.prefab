@@ -245,7 +245,6 @@ MonoBehaviour:
   templates:
   - {fileID: 11400000, guid: c8199029df9715d4bbd01aa56b80c7c6, type: 2}
   - {fileID: 11400000, guid: 14a1f056fa1ffba45a3efa4b7be046ee, type: 2}
-  - {fileID: 11400000, guid: 38a33a20b6de530468255998e2122725, type: 2}
   npcList: []
   areaList:
   - the south
