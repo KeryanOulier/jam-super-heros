@@ -57,9 +57,9 @@ public class DialogueUI : MonoBehaviour
 
     private void CloseDialogueBox()
     {
-        name_label.text = string.Empty;
         IsOpen = false;
         dialogueBox.SetActive(false);
         text_label.text = string.Empty;
+        name_label.text = string.Empty;
     }
 }

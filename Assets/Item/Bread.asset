@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84930d533809c8a468d8186dd25cc39b, type: 3}
-  m_Name: No
+  m_Script: {fileID: 11500000, guid: ff70075f6dc4811498e6bd31b3b6e85b, type: 3}
+  m_Name: Bread
   m_EditorClassIdentifier: 
-  dialogue:
-  - Too bad...
-  responses: []
+  _name: bread
+  _description: 
+  icon: {fileID: 21300000, guid: 678095381d851334fb550c5032ba1a81, type: 3}
+  sprite: {fileID: 0}

@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueActivator : MonoBehaviour, IInteractable
+public class ItemReceiver : MonoBehaviour, IInteractable
 {
-    [SerializeField] public DialogueObject dialogueObject;
+    public bool given = false;
+    public Quest quest;
+    public void Start()
+    {
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!enabled) return;
+
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerInteract player))
         {
             player.Interactable.Add(this);
         }
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerInteract player))
@@ -21,13 +27,14 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             player.Interactable.Remove(this);
         }
     }
-
     public void Interact(PlayerInteract player)
     {
-        if (TryGetComponent(out DialogueReponseEvents responseEvents))
+        if (given) return;
+        // TODO make sound
+        if (player.GetComponent<PlayerInventory>().removeItem(quest.item))
         {
-            player.DialogueUI.AddResponseEvents(responseEvents.Events);
+            given = true;
+            quest.Finish(player.gameObject);
         }
-        player.DialogueUI.ShowDialogue(dialogueObject, GetComponent<NPC>().NPCName);
     }
 }

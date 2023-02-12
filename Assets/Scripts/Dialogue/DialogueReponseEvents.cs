@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DialogueReponseEvents : MonoBehaviour
 {
-    [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] public DialogueObject dialogueObject;
     [SerializeField] private ResponseEvent[] events;
 
     public ResponseEvent[] Events => events;

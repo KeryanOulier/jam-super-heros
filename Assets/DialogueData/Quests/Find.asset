@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84930d533809c8a468d8186dd25cc39b, type: 3}
-  m_Name: Quest1
+  m_Name: Find
   m_EditorClassIdentifier: 
   dialogue:
-  - Hello 1
+  - Please listen. I have lost something in ${area}. Can you find it and bring it
+    back?
   responses:
   - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: 355561159aeec2b4f8dd7da77fff7146, type: 2}

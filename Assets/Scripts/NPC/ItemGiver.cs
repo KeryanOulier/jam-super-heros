@@ -2,18 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueActivator : MonoBehaviour, IInteractable
+public class ItemGiver : MonoBehaviour, IInteractable
 {
-    [SerializeField] public DialogueObject dialogueObject;
+    public Item item;
+    public bool given = false;
+
+    public void Start()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!enabled) return;
+
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerInteract player))
         {
             player.Interactable.Add(this);
         }
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out PlayerInteract player))
@@ -21,13 +28,11 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             player.Interactable.Remove(this);
         }
     }
-
     public void Interact(PlayerInteract player)
     {
-        if (TryGetComponent(out DialogueReponseEvents responseEvents))
-        {
-            player.DialogueUI.AddResponseEvents(responseEvents.Events);
-        }
-        player.DialogueUI.ShowDialogue(dialogueObject, GetComponent<NPC>().NPCName);
+        if (given) return;
+        // TODO make sound
+        given = true;
+        player.GetComponent<PlayerInventory>().addItem(item);
     }
 }

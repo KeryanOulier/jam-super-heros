@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84930d533809c8a468d8186dd25cc39b, type: 3}
-  m_Name: No
+  m_Name: Deliver
   m_EditorClassIdentifier: 
   dialogue:
-  - Too bad...
-  responses: []
+  - Hey! Can you deliver this package to ${npc}?
+  responses:
+  - responseText: Yes
+    dialogueObject: {fileID: 11400000, guid: 355561159aeec2b4f8dd7da77fff7146, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: 09a3fde88d5eab641bad6df1760bc90e, type: 2}

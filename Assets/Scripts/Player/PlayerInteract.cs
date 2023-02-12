@@ -7,20 +7,30 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private DialogueUI dialogueUI;
     public DialogueUI DialogueUI => dialogueUI;
 
-    public IInteractable Interactable { get; set; }
+    public List<IInteractable> Interactable { get; set; } = new List<IInteractable>();
 
     public void Update()
     {
-        if (dialogueUI.IsOpen) {
-            GetComponent<PlayerControler>().enabled = false;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        } else
+        foreach (var interactable in Interactable)
         {
-            GetComponent<PlayerControler>().enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.E) && !DialogueUI.IsOpen)
-        {
-            Interactable?.Interact(this);
+            if (dialogueUI.IsOpen) {
+                GetComponent<PlayerControler>().enabled = false;
+                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            } else
+            {
+                GetComponent<PlayerControler>().enabled = true;
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (interactable is DialogueActivator)
+                {
+                    if (!DialogueUI.IsOpen)
+                        interactable?.Interact(this);
+                } else
+                {
+                    interactable?.Interact(this);
+                }
+            }
         }
     }
 }
