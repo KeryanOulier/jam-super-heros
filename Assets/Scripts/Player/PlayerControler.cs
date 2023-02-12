@@ -21,9 +21,12 @@ public class PlayerControler : MonoBehaviour
     bool canDash = true;
     bool dashing = false;
 
+    private Animator animator;
+    
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     // Start is called before the first frame update
     void Start()
@@ -43,6 +46,8 @@ public class PlayerControler : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+        animator.SetFloat("X", inputHorizontal);
+        animator.SetFloat("Y", inputVertical);
     }
 
     void FixedUpdate()
