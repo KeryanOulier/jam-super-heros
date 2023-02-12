@@ -165,8 +165,19 @@ MonoBehaviour:
   areaList:
   - the south
   itemList:
+  - {fileID: 11400000, guid: 5e04903045cb2a8499f23fd671f3a46b, type: 2}
+  - {fileID: 11400000, guid: 6f5318b3dd521cf42872385b46f7facc, type: 2}
+  - {fileID: 11400000, guid: c86bf355e272b5b42ae953288738f59d, type: 2}
   - {fileID: 11400000, guid: 3ade2a59c76233545987dab4ada53ed2, type: 2}
   - {fileID: 11400000, guid: c4af70cda0b22344eb34c1c1173d56d7, type: 2}
+  - {fileID: 11400000, guid: 0744f1db551ce2a4ebccdd2638305019, type: 2}
+  - {fileID: 11400000, guid: cdd2f04406874784b9e9e46265013b36, type: 2}
+  - {fileID: 11400000, guid: bd09d5ac4fbc7f1499a8dddf784423aa, type: 2}
+  - {fileID: 11400000, guid: 290b9607dead77642b731077e42fecc4, type: 2}
+  - {fileID: 11400000, guid: 9299dfc2d98d77a469fefd1e33ac28f0, type: 2}
+  - {fileID: 11400000, guid: 42e44fbeb8e16f340a5c2bf745081cac, type: 2}
+  - {fileID: 11400000, guid: f681127e8adb3014ab1f5102abe1451f, type: 2}
+  - {fileID: 11400000, guid: aa9f5d86fb0b71a47ab729115b9e8fd6, type: 2}
   hello: {fileID: 11400000, guid: 8434f73f3e732ab428387e3e5be1ae36, type: 2}
 --- !u!114 &3289997698321867868
 MonoBehaviour:

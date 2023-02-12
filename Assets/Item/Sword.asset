@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff70075f6dc4811498e6bd31b3b6e85b, type: 3}
-  m_Name: Bread
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  _name: Bread
+  _name: Sword
   _description: 
-  icon: {fileID: 21300000, guid: 82a33866f5441044db19979993878978, type: 3}
+  icon: {fileID: 1185852441, guid: 47e65d06dd3ffc441888f77f323777f0, type: 3}
   sprite: {fileID: 0}
