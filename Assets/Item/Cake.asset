@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff70075f6dc4811498e6bd31b3b6e85b, type: 3}
   m_Name: Cake
   m_EditorClassIdentifier: 
-  _name: cake
+  _name: Cake
   _description: 
-  icon: {fileID: 21300000, guid: 5d52b20f865aff242bfcb08c3b6f61a5, type: 3}
+  icon: {fileID: 21300000, guid: 8e00a102c3e2b2f4a93c7703cde349ef, type: 3}
   sprite: {fileID: 0}
