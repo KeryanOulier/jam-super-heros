@@ -34,5 +34,13 @@ public class ItemGiver : MonoBehaviour, IInteractable
         // TODO make sound
         given = true;
         player.GetComponent<PlayerInventory>().addItem(item);
+        StartCoroutine(dest(player));
+    }
+
+    IEnumerator dest(PlayerInteract player)
+    {
+        yield return null;
+        player.Interactable.Remove(this);
+        Destroy(this);
     }
 }

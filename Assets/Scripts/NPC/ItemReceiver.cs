@@ -35,6 +35,15 @@ public class ItemReceiver : MonoBehaviour, IInteractable
         {
             given = true;
             quest.Finish(player.gameObject);
+
+            StartCoroutine(dest(player));
         }
+    }
+
+    IEnumerator dest(PlayerInteract player)
+    {
+        yield return null;
+        player.Interactable.Remove(this);
+        Destroy(this);
     }
 }

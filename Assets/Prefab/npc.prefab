@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 9122921216221094561}
   - component: {fileID: 9122921216221094566}
   - component: {fileID: 9122921216221094567}
-  - component: {fileID: 3963768876576693302}
-  - component: {fileID: 604398225868143804}
   - component: {fileID: 3289997698321867868}
   m_Layer: 0
   m_Name: npc
@@ -164,35 +162,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14a1f056fa1ffba45a3efa4b7be046ee, type: 2}
   - {fileID: 11400000, guid: 38a33a20b6de530468255998e2122725, type: 2}
   npcList: []
-  areaList: []
-  testItem: {fileID: 0}
---- !u!114 &3963768876576693302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9122921216221094573}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 970fb0b9a790f214f9da2ffbe9d020d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  given: 0
---- !u!114 &604398225868143804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9122921216221094573}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d422a9f03546d4d9c1794df91d3f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  given: 0
+  areaList:
+  - the south
+  itemList:
+  - {fileID: 11400000, guid: 3ade2a59c76233545987dab4ada53ed2, type: 2}
+  - {fileID: 11400000, guid: c4af70cda0b22344eb34c1c1173d56d7, type: 2}
+  hello: {fileID: 11400000, guid: 8434f73f3e732ab428387e3e5be1ae36, type: 2}
 --- !u!114 &3289997698321867868
 MonoBehaviour:
   m_ObjectHideFlags: 0
